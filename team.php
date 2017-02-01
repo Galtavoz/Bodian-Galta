@@ -26,9 +26,17 @@
 			</nav>
 		</div>
 	</div>
-	<?php
-		include("scritta.html");
-	?>
+		
+		<div class="boxpagina">
+			<div class="pagina">
+				<p>TEAM</p>
+			</div>
+		<div class="separatore">
+			<span class="sepl"><span class="linea"></span></span>
+			<span class="sepd"><span class="linea"></span></span>
+		</div>
+	</div>
+	
 	<div class="riqteam">
 	
 		<div class="riqfototeam">
