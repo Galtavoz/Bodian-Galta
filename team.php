@@ -19,17 +19,24 @@
 			<nav class="cl-effect-21" id="cl-effect-21">
 				<a href="storia.php">Storia</a>
 				<a href="team.php">Team</a>
-				<a href="contatti.php">Contattaci</a>
 				<a href="articoli.php">Articoli</a>
-				<a href="galleria.php">Galleria</a>
 				<a href="progetti.php">Progetti</a>
+				<a href="contatti.php">Contattaci</a>
 			</nav>
 		</div>
 	</div>
 		
 		<div class="boxpagina">
 			<div class="pagina">
-				<p>TEAM</p>
+				<?php	
+				include("config.php");
+		        $query = mysql_query("select * from pagine");
+				if(!$query) die('Error loading page');
+				$ris = mysql_fetch_array($query);
+					if($ris['pagina']== "TEAM"){
+						echo $ris['pagina'];
+					}
+			?>
 			</div>
 		<div class="separatore">
 			<span class="sepl"><span class="linea"></span></span>
@@ -37,44 +44,6 @@
 		</div>
 	</div>
 	
-	<div class="riqteam">
-	
-		<div class="riqfototeam">
-			<div class="fototeam">
-			<img class="wrapteam" src="img/Galta.png" alt="Galta">
-			</div>		
-		</div>
-	
-		<div class="scrittateam">
-			<p class="nome">MARCO GALTAROSSA</p>
-			<p class="nome">Chief Executive Office</p>
-		</div>
-	</div>
-
-	<div class="riqteam">
-	
-		<div class="riqfototeam">
-			<div class="fototeam">
-				<img class="wrapteam" src="img/Galta.png" alt="Galta">
-			</div>		
-		</div>
-	
-		<div class="scrittateam">
-			<p class="nome">MALICK BODIAN</p>
-			<p class="nome">Mongolo di turno</p>
-		</div>
-	</div>
-
-	<div class="riqteam">
-	
-		<div class="riqfototeam">
-			<div class="fototeam">
-				<img class="wrapteam" src="img/Galta.png" alt="Galta">
-			</div>		
-		</div>
-	
-		<div class="scrittateam">
-			<p class="nome">XXX</p>
-			<p class="nome">AAAA</p>
-	
-		</div>
+<?php
+include('team.html');
+?>
