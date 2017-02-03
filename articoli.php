@@ -9,7 +9,7 @@
 		        $query = mysql_query("select * from pagine");
 				if(!$query) die('Error loading page');
 				$ris = mysql_fetch_array($query);
-				if($ris['pagina']== "ARTICOLI") echo $ris['pagina'];
+				if($ris['pagina']= "ARTICOLI") echo $ris['pagina'];
 			?>
 		</div>
 		<?php
