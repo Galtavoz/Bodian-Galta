@@ -16,7 +16,7 @@
 		 include("scritta.html");
 		?>
 	</div>
-<div class=\"boxpaginaarticolo\">
+<div class="boxpaginaarticolo">
 <?php	
 	include("config.php");
 	$query = mysql_query("select * from immagini");

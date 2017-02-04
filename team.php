@@ -29,10 +29,10 @@
 		<div class="boxpagina">
 			<div class="pagina">
 				<?php	
-				include("config.php");
-		        $query = mysql_query("select * from pagine");
-				if(!$query) die('Error loading page');
-				$ris = mysql_fetch_array($query);
+					include("config.php");
+					$query = mysql_query("select * from pagine");
+					if(!$query) die('Error loading page');
+					$ris = mysql_fetch_array($query);
 					if($ris['pagina']= "TEAM"){
 						echo $ris['pagina'];
 					}
@@ -44,6 +44,21 @@
 		</div>
 	</div>
 	
-<?php
-include('team.html');
-?>
+	<?php
+		include("config.php");
+		$query = mysql_query("select * from team");
+		if(!$query)die('<h1>Error loading Team Page</h1>');
+		while($ris = mysql_fetch_array($query)){
+			echo"<div class=\"riqteam\">
+					<div class=\"riqfototeam\">
+						<div class=\"fototeam\">
+							<img class=\"wrapteam\" src=\"$ris[src]\" alt=\"$ris[alt]\">
+						</div>		
+					</div>
+					<div class=\"scrittateam\">
+						<p class=\"nome\">$ris[nome] $ris[cognome]</p>
+						<p class=\"nome\">$ris[ruolo]</p>
+					</div>
+				</div>";
+		}
+	?>
