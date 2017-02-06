@@ -62,3 +62,4 @@
 				</div>";
 		}
 	?>
+	<?phpinclude('sotto.html')?>

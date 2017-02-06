@@ -28,7 +28,7 @@
 						<div class=\"imgprogetto\">
 							<img alt=\"$ris[alt]\" src=\"$ris[src]\" title=\"$ris[title]\"/>
 						</div>
-			<			div class=\"scritta_progetto\">
+						<div class=\"scritta_progetto\">
 							<h3 class=\"title\">$ris[titolo]</h3>
 						</div>
 					</div>
