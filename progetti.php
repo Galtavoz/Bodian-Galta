@@ -30,6 +30,7 @@
 						</div>
 						<div class=\"scritta_progetto\">
 							<h3 class=\"title\">$ris[titolo]</h3>
+							<a class=\"bottonegrigio\" href=\"$ris[href]?id=$ris[id]\">Leggi Tutto</a>
 						</div>
 					</div>
 				</div>";

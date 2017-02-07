@@ -35,7 +35,7 @@
 				</div>
 				
 					<h3 class=\"smalltitle\"><a href=\"$ris[href]\"> $ris[titolo] </a></h3>
-					<a class=\"bottonegrigio\" href=\"$ris[href]\">Leggi Tutto</a>
+					<a class=\"bottonegrigio\" href=\"$ris[href]?id=$ris[id]\">Leggi Tutto</a>
 			</div>
 		</div>";
 	}		
