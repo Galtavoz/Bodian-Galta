@@ -4,8 +4,8 @@ include("csrf.php");
 ?>
 			<?php
 				$articolo=$_GET['id'];
-				$ris=mysql_query("SELECT * FROM immagini WHERE id = '$articolo'") or die(mysql_error());
-				$dato=mysql_fetch_array($ris);
+				$ris== mysqli_query($connessione,"SELECT * FROM immagini WHERE id = '$articolo'") or die(mysqli_error());
+				$dato=mysqli_fetch_array($ris);
 				csrf('modifca','aggiornamento_articolo','generate');
 			?>
 			<script type="text/javascript" src="js/ckeditor/ckeditor.js" ></script>
