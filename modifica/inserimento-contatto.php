@@ -37,8 +37,8 @@
 			$err['messaggio'] = array('errore' => 'Messaggio vuoto');
 		}
 	if ($err['count'] === 0) {
-		mysql_query("INSERT INTO contatti(nome,cognome,email,telefono,messaggio,data)VALUES  ('$nome','$cognome','$email','$telefono','$messaggio',now())") or die(mysql_error());
-		if(mysql_affected_rows()){
+		mysqli_query($connessione,"INSERT INTO contatti(nome,cognome,email,telefono,messaggio,data)VALUES  ('$nome','$cognome','$email','$telefono','$messaggio',now())") or die(mysql_error());
+		if(mysqli_affected_rows()){
 			echo"<div class=\"alert alert-success\">Inserimento progetto effettuato con successo</div>";
 			}
 			else{
