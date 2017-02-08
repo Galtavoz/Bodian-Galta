@@ -23,3 +23,6 @@
 		$ris = mysql_fetch_array($query);
 		if($ris['id']=="1")	echo" <div id=\"content\"> $ris[storia] </div>";
 ?>
+<?php	
+	include("sotto.html");
+?>

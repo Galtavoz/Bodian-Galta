@@ -32,3 +32,7 @@
 		</div>
 	</div>
 </div>
+
+<?php	
+	include("sotto.html");
+?>

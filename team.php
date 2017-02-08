@@ -61,3 +61,6 @@
 		}
 	?>
 	<?phpinclude('sotto.html')?>
+<?php	
+	include("sotto.html");
+?>
