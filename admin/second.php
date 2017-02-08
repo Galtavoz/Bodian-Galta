@@ -31,21 +31,14 @@ $_GET = cleanRequest($_GET);
 	$password = isset($_POST['pass']) && is_string($_POST['pass']) ? $_POST['pass']:'';
 	
 	
-	//Sql injection Secure;
-	//$user = madSafety($user);
-	//$password = madSafety($password);
 	
 	
-	//Query
-	
-	
-	$query = mysql_query("SELECT * from admin where username = '$user' and password = '".md5($password)."'");
-	$n = mysql_affected_rows();
+	$query = mysqli_query("SELECT * from admin where username = '$user' and password = '".md5($password)."'");
+	$n = mysqli_affected_rows();
 	if(!$query || $n != 1){
 		die('Nome utente o password sbagliata');
 	}
-	$res = mysql_fetch_array($query);
-	
+	$res = mysqli_fetch_array($query);
 	
 	$permessi = $res['permessi'];
 	$_SESSION['username'] = $user;
