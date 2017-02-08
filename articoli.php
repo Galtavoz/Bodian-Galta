@@ -27,7 +27,7 @@
 				<div class=\"imagearticolo\">
 				<a href=\"$ris[href]\"  class=\"aarticolo\"></a>
 			
-				<img src=\"$ris[src]\"class=\"imgarticolo\"></img>
+				<img src=\"$ris[src]\"class=\"imgarticolo\" alt=\"$ris[alt]\" title=\"$ris[title]\"></img>
 				</div>
 				<div class=\"boxscrittaarticolo\">
 					<div class=\"boxautore\">
