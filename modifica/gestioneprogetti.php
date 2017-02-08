@@ -7,9 +7,9 @@
 			<?php	
 				include("config.php");
 				$id=$_GET['id'];
-		         $query = mysql_query("select * from progetti where id=$id ");
+		         $query = mysqli_query($connessione,"select * from progetti where id=$id ");
 				if(!$query) die('Error loading page');
-				$ris = mysql_fetch_array($query);
+				$ris = mysqli_fetch_array($query);
 				if($ris['id']= $id){
 					echo" <p class=\"the-title\"> $ris[titolo] </p>";
 					
@@ -23,9 +23,9 @@
 			<div class="boxarticolotesto">
 				<?php	
 					include("config.php");
-					$query = mysql_query("select testo from immagini");
+					$query = mysqli_query($connessione,"select testo from immagini");
 					if(!$query) die('Error loading page');
-					$ris = mysql_fetch_array($query);
+					$ris = mysqli_fetch_array($query);
 					echo" <div class=\"articolotesto\"> $ris[testo] </div>";	
 				?>
 			</div>
