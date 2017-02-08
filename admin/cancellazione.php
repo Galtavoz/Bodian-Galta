@@ -7,8 +7,8 @@ include("sopra.php");
 	switch ($_GET['tipo']) {
 		case 'admin':
 			$username=$_GET['username'];
-			$ris=mysql_query("DELETE FROM admin WHERE username=\"$username\"");
-			if(mysql_affected_rows()){
+			$ris= mysqli_query($connessione,"DELETE FROM admin WHERE username=\"$username\"");
+			if(mysqli_affected_rows()){
 				echo"<div class=\"alert alert-success\">Cancellazione admin effettuata con successo</div>";
 			}
 			else{
@@ -17,8 +17,8 @@ include("sopra.php");
 		break;
 		case 'articolo':
 			$id=$_GET['id'];
-			$ris=mysql_query("DELETE FROM immagini WHERE id='$_GET[id]'");
-			if(mysql_affected_rows()){
+			$ris= mysqli_query($connessione,"DELETE FROM immagini WHERE id='$_GET[id]'");
+			if(mysqli_affected_rows()){
 				echo"<div class=\"alert alert-success\">Cancellazione articolo effettuata con successo</div>";
 			}
 			else{
@@ -27,8 +27,8 @@ include("sopra.php");
 		break;
 			case 'progetto':
 			$id=$_GET['id'];
-			$ris=mysql_query("DELETE FROM progetti WHERE id='$_GET[id]'");
-			if(mysql_affected_rows()){
+			$ris= mysqli_query($connessione,"DELETE FROM progetti WHERE id='$_GET[id]'");
+			if(mysqli_affected_rows()){
 				echo"<div class=\"alert alert-success\">Cancellazione progetto effettuata con successo</div>";
 			}
 			else{
