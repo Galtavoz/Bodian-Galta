@@ -6,9 +6,9 @@
 		<div class="pagina2">
 			<?php	
 				include("config.php");
-		        $query = mysql_query("select * from pagine");
+		        $query = mysqli_query($connessione,"select * from pagine");
 				if(!$query) die('Error loading page');
-				$ris = mysql_fetch_array($query);
+				$ris = mysqli_fetch_array($query);
 					if($ris['pagina']="PROGETTI"){
 						echo $ris['pagina'];
 					}
@@ -20,9 +20,9 @@
 	</div>
 	<?php
 		include("config.php");
-		$query = mysql_query("select * from progetti");
+		$query = mysqli_query($connessione,"select * from progetti");
 		if(!$query) die('Error loading page');
-		while($ris = mysql_fetch_array($query)){
+		while($ris = mysqli_fetch_array($query)){
 			echo" <div class=\"boxprogetti\">
 					<div class=\"item_holder\">
 						<div class=\"imgprogetto\">
