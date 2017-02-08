@@ -9,12 +9,12 @@ include("sopra.php");
 					</div>
 					<table class="table table-bordered table-hover table-striped">
 						<?php
-							$query="SELECT username,password FROM admin ORDER BY username";
-							$ris=mysql_query($query) or die(mysql_error());
+							$query= mysqli_query($connessione,"SELECT username,password FROM admin ORDER BY username");
+							$ris=mysqli_query($query) or die(mysql_error());
 							if(mysql_num_rows($ris)){
 								echo'
 									<tr><th>Username</th><th>Password</th><th>Modifica</th><th>Elimina</th>';
-								while($dato=mysql_fetch_array($ris)){
+								while($dato=mysqli_fetch_array($ris)){
 									echo"<tr>
 											<td style=\"color: #0088CC;\">$dato[username]</td>
 											<td>$dato[password]</td>	
