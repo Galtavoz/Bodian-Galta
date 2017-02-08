@@ -4,8 +4,8 @@ include("csrf.php");
 ?>
 			<?php
 				$progetto=$_GET['id'];
-				$ris=mysql_query("SELECT * FROM progetti WHERE id = '$progetto'") or die(mysql_error());
-				$dato=mysql_fetch_array($ris);
+				$ris= mysqli_query($connessione,"SELECT * FROM progetti WHERE id = '$progetto'") or die(mysqli_error());
+				$dato=mysqli_fetch_array($ris);
 				csrf('modifca','aggiornamento_progetto','generate');
 			?>
 			<script type="text/javascript" src="js/ckeditor/ckeditor.js" ></script>
