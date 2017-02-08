@@ -34,30 +34,30 @@
 		<div class="formbox>">
 			<div class="form">
 				
-				<form method="POST" class="real" action="inserimento-contatto.php">
+				<form method="POST" class="real" action="inserimento-contatto.php" onsubmit="return validazioneForm();">
 					<div class="boxsxnome">
-						<label class="labelsx">Nome</label></br>
-						<input class="contattosx"type="text" name="nome">
+						<label class="labelsx" for="nome">Nome</label></br>
+						<input class="contattosx" id="nome" type="text" name="nome">
 					</div>
 					<div class="boxdxcognome">
-						<label class="labeldx">Cognome</label></br>
-						<input  class="contattodx" type="text" name="cognome">
+						<label class="labeldx" for="cognome">Cognome</label></br>
+						<input  class="contattodx" id="cognome" type="text" name="cognome">
 					</div>
 					
 					<div class="boxsxnome">
-						<label class="labelsx">Email</label></br>
-						<input class="contattosx"type="text" name="email">
+						<label class="labelsx" for="email">Email</label></br>
+						<input class="contattosx" id="email" type="text" name="email">
 					</div>
 					<div class="boxdxcognome">
-						<label class="labeldx">Telefono</label></br>
-						<input  class="contattodx" type="text" name="telefono">
+						<label class="labeldx" for="telefono">Telefono</label></br>
+						<input  class="contattodx" id="telefono" type="text" name="telefono">
 					</div>
 					<div class="boxmessaggio">
-						<label class="labelmessaggio">Messaggio</label>
-						<input class="contattomessaggio" type="textarea" name="messaggio">
+						<label class="labelmessaggio" for="messaggio">Messaggio</label></br>
+						<textarea class="contattomessaggio" id="messaggio" name="messaggio"></textarea>
 					</div>
 					<div class="boxbottone">
-						<input class="contattobottone" type="submit" value="CONFERMA">
+						<input class="contattobottone" type="submit" value="CONFERMA" id="submit">
 					</div>
 					<input type="hidden" name="tipo" value="contatto"/>
 				</form>

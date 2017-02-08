@@ -26,7 +26,6 @@
 		</div>
 	</div>
 		
-		<div class="boxpagina">
 			<div class="pagina">
 				<?php	
 					include("config.php");
@@ -38,11 +37,10 @@
 					}
 			?>
 			</div>
-		<div class="separatore">
-			<span class="sepl"><span class="linea"></span></span>
-			<span class="sepd"><span class="linea"></span></span>
+		<div class="separatore2">
+			<span class="sepl2"><span class="linea2"></span></span>
+			<span class="sepd"><span class="linea2"></span></span>
 		</div>
-	</div>
 	
 	<?php
 		include("config.php");
