@@ -6,9 +6,9 @@
 		<div class="pagina2">
 			<?php	
 				include("config.php");
-		        $query = mysql_query("select * from pagine");
+		        $query = mysqli_query($connessione,"select * from pagine");
 				if(!$query) die('Error loading page');
-				$ris = mysql_fetch_array($query);
+				$ris = mysqli_fetch_array($query);
 				if($ris['pagina']= "ARTICOLI") echo $ris['pagina'];
 			?>
 		</div>
@@ -19,9 +19,9 @@
 <div class="boxpaginaarticolo">
 <?php	
 	include("config.php");
-	$query = mysql_query("select * from immagini");
+	$query = mysqli_query($connessione,"select * from immagini");
 	if(!$query) die('Error loading page');
-	while($ris = mysql_fetch_array($query)){
+	while($ris = mysqli_fetch_array($query)){
 		echo"
 			<div class=\"boxarticolo\">
 				<div class=\"imagearticolo\">
