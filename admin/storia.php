@@ -3,8 +3,8 @@ include("sopra.php");
 include("csrf.php");
 ?>
 			<?php
-				$ris=mysql_query("SELECT * FROM storia") or die(mysql_error());
-				$dato=mysql_fetch_array($ris);
+				$ris=mysqli_query("SELECT * FROM storia") or die(mysqli_error());
+				$dato=mysqli_fetch_array($ris);
 				csrf('modifca','aggiornamento_articolo','generate');
 			?>
 			<script type="text/javascript" src="js/ckeditor/ckeditor.js" ></script>
