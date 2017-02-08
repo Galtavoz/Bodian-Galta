@@ -15,7 +15,7 @@
 <body class="sfondo">
 	<div id="contentM">
 		<div id="menu">
-		<a href="index.php"><img class="logo" src="img/MAM.png" alt="XXX" title="XXX"/></a>
+		<a href="index.php"><img class="logo" src="img/MAM.png" alt="logo MAM" title="Home"/></a>
 			<nav class="cl-effect-21" id="cl-effect-21">
 				<a href="storia.php">Storia</a>
 				<a href="team.php">Team</a>
@@ -52,7 +52,7 @@
 			echo"<div class=\"riqteam\">
 					<div class=\"riqfototeam\">
 						<div class=\"fototeam\">
-							<img class=\"wrapteam\" src=\"$ris[src]\" alt=\"$ris[alt]\">
+							<img class=\"wrapteam\"src=\"$ris[src]\" alt=\"$ris[alt]\" title=\"$ris[title]\">
 						</div>		
 					</div>
 					<div class=\"scrittateam\">
