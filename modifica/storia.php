@@ -6,9 +6,9 @@
 		<div class="pagina2">
 			<?php	
 				include("config.php");
-		        $query = mysql_query("select * from pagine");
+		        $query = mysqli_query($connessione,"select * from pagine");
 				if(!$query) die('Error loading page');
-				$ris = mysql_fetch_array($query);
+				$ris = mysqli_fetch_array($query);
 				if($ris['pagina']= "STORIA") echo $ris['pagina'];
 			?>
 		</div>
@@ -18,9 +18,9 @@
 	</div>
 <?php	
 	include("config.php");
-		$query = mysql_query("select * from storia");
+		$query = mysqli_query($connessione,"select * from storia");
 		if(!$query) die('Error loading page');
-		$ris = mysql_fetch_array($query);
+		$ris = mysqli_fetch_array($query);
 		if($ris['id']=="1")	echo" <div id=\"content\"> $ris[storia] </div>";
 ?>
 <?php	
