@@ -29,9 +29,9 @@
 			<div class="pagina">
 				<?php	
 					include("config.php");
-					$query = mysql_query("select * from pagine");
+					$query= mysqli_query($connessione,"select * from pagine");
 					if(!$query) die('Error loading page');
-					$ris = mysql_fetch_array($query);
+					$ris = mysqli_fetch_array($query);
 					if($ris['pagina']= "TEAM"){
 						echo $ris['pagina'];
 					}
@@ -44,9 +44,9 @@
 	
 	<?php
 		include("config.php");
-		$query = mysql_query("select * from team");
+		$query = mysqli_query($connessione,"select * from team");
 		if(!$query)die('<h1>Error loading Team Page</h1>');
-		while($ris = mysql_fetch_array($query)){
+		while($ris = mysqli_fetch_array($query)){
 			echo"<div class=\"riqteam\">
 					<div class=\"riqfototeam\">
 						<div class=\"fototeam\">
