@@ -28,8 +28,8 @@ $err['count'] = 0;
 				$err['contenuto'] = array('errore' => 'Contenuto vuoto o troppo lungo');
 			}
 			if ($err['count'] === 0) {
-				mysql_query("UPDATE immagini SET titolo = '".$titolo."',testo = '".$contenuto."',autore= '".$_SESSION['nome']."' ,data=now() WHERE id = $id ") or die(mysql_error());
-				if(mysql_affected_rows()){
+				mysqli_query($connessione,"UPDATE immagini SET titolo = '".$titolo."',testo = '".$contenuto."',autore= '".$_SESSION['nome']."' ,data=now() WHERE id = $id ") or die(mysqli_error());
+				if(mysqli_affected_rows()){
 					echo"<div class=\"alert alert-success\">Modifica articolo effettuata con successo</div>";
 				}
 				else{
@@ -66,8 +66,8 @@ $err['count'] = 0;
 				$err['contenuto'] = array('errore' => 'Contenuto vuoto o troppo lungo');
 			}
 			if ($err['count'] === 0) {
-				mysql_query("UPDATE immagini SET titolo = '".$titolo."',testo = '".$contenuto."',autore= '".$_SESSION['nome']."' ,data=now() WHERE id = $id ") or die(mysql_error());
-				if(mysql_affected_rows()){
+				mysqli_query($connessione,"UPDATE immagini SET titolo = '".$titolo."',testo = '".$contenuto."',autore= '".$_SESSION['nome']."' ,data=now() WHERE id = $id ") or die(mysqli_error());
+				if(mysqli_affected_rows()){
 					echo"<div class=\"alert alert-success\">Modifica Progetto effettuata con successo</div>";
 				}
 				else{
@@ -91,8 +91,8 @@ $err['count'] = 0;
 				$err['contenuto'] = array('errore' => 'Contenuto vuoto o troppo lungo');
 			}
 			if ($err['count'] === 0) {
-				mysql_query("UPDATE storia SET storia = '".$contenuto."'") or die(mysql_error());
-				if(mysql_affected_rows()){
+				mysqli_query($connessione,"UPDATE storia SET storia = '".$contenuto."'") or die(mysqli_error());
+				if(mysqli_affected_rows()){
 					echo"<div class=\"alert alert-success\">Modifica Storia effettuata con successo</div>";
 				}
 				else{
@@ -117,8 +117,8 @@ $err['count'] = 0;
 				$err['contenuto'] = array('errore' => 'Contenuto vuoto o troppo lungo');
 			}
 			if ($err['count'] === 0) {
-				mysql_query("UPDATE news SET messaggio = '".$contenuto."',mittente= '".$_SESSION['nome']."' ,data=now() WHERE page = 7 ") or die(mysql_error());
-				if(mysql_affected_rows()){
+				= mysqli_query($connessione,"UPDATE news SET messaggio = '".$contenuto."',mittente= '".$_SESSION['nome']."' ,data=now() WHERE page = 7 ") or die(mysqli_error());
+				if(mysqli_affected_rows()){
 					echo"<div class=\"alert alert-success\">Modifica Contatti effettuata con successo</div>";
 				}
 				else{
