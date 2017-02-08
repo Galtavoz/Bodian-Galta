@@ -4,8 +4,8 @@ include("csrf.php");
 ?>
 			<?php
 				$messaggio=$_GET['id'];
-				$ris=mysqli_query("SELECT * FROM contatti WHERE id = '$messaggio' ") or die(mysqli_error());
-				$dato=mysqli_fetch_array($ris);
+				$ris = mysqli_query($connessione,"SELECT * FROM contatti WHERE id = '$messaggio' ") or die(mysqli_error());
+				$dato =mysqli_fetch_array($ris);
 				csrf('modifca','aggiornamento_articolo','generate');
 			?>
 			<script type="text/javascript" src="js/ckeditor/ckeditor.js" ></script>
