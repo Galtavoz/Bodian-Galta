@@ -9,12 +9,12 @@ include("sopra.php");
 					</div>
 					<table class="table table-bordered table-hover table-striped">
 						<?php
-							$query="SELECT * FROM progetti ORDER BY titolo";
-							$ris=mysql_query($query) or die(mysql_error());
-							if(mysql_num_rows($ris)){
+							$query= mysqli_query($connessione,"SELECT * FROM progetti ORDER BY titolo");
+							$ris=mysqli_query($query) or die(mysqli_error());
+							if(mysqli_num_rows($ris)){
 								echo'
 									<tr><th>Titolo</th><th>Contenuto</th><th>Modifica</th><th>Elimina</th></tr>';
-								while($dato=mysql_fetch_array($ris)){
+								while($dato=mysqli_fetch_array($ris)){
 									echo"<tr>
 											<td style=\"color: #0088CC;\">$dato[titolo]</td>
 											
