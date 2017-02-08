@@ -6,12 +6,12 @@ include("sopra.php");
 					<h2 style="font-variant:small-caps;">Gestione Contatti</h2><br/>
 					<table class="table table-bordered table-hover table-striped">
 						<?php
-							$query="SELECT * FROM contatti ORDER BY data";
-							$ris=mysql_query($query) or die(mysql_error());
-							if(mysql_num_rows($ris)){
+							$query= mysqli_query($connessione,"SELECT * FROM contatti ORDER BY data");
+							$ris=mysqli_query($query) or die(mysqli_error());
+							if(mysqli_num_rows($ris)){
 								echo'
 									<tr><th>Nome</th><th>Cognome</th><th>Telefono</th><th>Email</th><th>Data</th><th>Messaggio</th><th>Vedi</th></tr>';
-								while($dato=mysql_fetch_array($ris)){
+								while($dato=mysqli_fetch_array($ris)){
 									echo"<tr>
 											<td style=\"color: #0088CC;\">$dato[nome]</td>
 											<td style=\"color: #0088CC;\">$dato[cognome]</td>
