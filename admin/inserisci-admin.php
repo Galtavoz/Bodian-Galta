@@ -23,3 +23,6 @@ csrf('inserisci','inserimento_utente','validate');
 					</form>
 				</div>
 			</div>
+<?php
+include("sotto.php");
+?>

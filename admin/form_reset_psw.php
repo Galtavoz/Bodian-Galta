@@ -11,3 +11,6 @@ include("sopra.php");
 		    </form>
           </div>
         </div>
+<?php
+include("sotto.php");
+?>

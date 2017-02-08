@@ -25,3 +25,6 @@ csrf('inserisci','inserimento_articolo','generate');
 					</form>
 				</div>
 			</div>
+<?php
+include("sotto.php");
+?>

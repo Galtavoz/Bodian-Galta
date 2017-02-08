@@ -23,38 +23,7 @@ $err['count'] = 0;
 					}
 				}
 			}
-		break;				
-		//case 'foto':
-			//$allowedExts = array("gif", "jpeg", "jpg", "png");
-			//$temp = explode(".", $_FILES['file']["name"]);
-			//$extension = end($temp);
-			
-			//if ($_FILES["file"]["error"] > 0){
-				//echo "Return Code: " . $_FILES["file"]["error"] . "<br>";
-			//}
-			//else{
-				//echo "Upload: " . $_FILES["file"]["name"] . "<br>";
-				//echo "Type: " . $_FILES["file"]["type"] . "<br>";
-				//echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";
-				//echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";
-
-				//if (file_exists("../images/" . $_FILES["file"]["name"])){
-					//echo $_FILES["file"]["name"] . " already exists. ";
-				//}
-				//else{
-				//move_uploaded_file($_FILES["file"]["tmp_name"],"../images/" . $_FILES["file"]["name"]);
-					//echo "Stored in: " . "../images/" . $_FILES["file"]["name"];
-				//}
-			//}
-			
-			//$query = mysql_query("insert into associazioni (nome,regione,foto,href) values ('$_POST[titolo]','$_POST[regione]','images/".$_FILES["file"]["name"]."','$_POST[link]')");
-			
-			//if(!$query){
-				//echo"<div class=\"alert alert-error\">Errore inserimento utente!</div>";
-			//}else{
-				//echo"<div class=\"alert alert-success\">Inserimento utente effettuato con successo</div>";
-			//}
-			//break;
+		break;
 		case 'admin':
 			if(isset($_POST['username']) && strlen($_POST['username']) <= 32){
 				$username = $_POST['username'];
@@ -91,9 +60,7 @@ $err['count'] = 0;
 					}
 				}
 			}
-		break;
-		case 'fhome':			$allowedExts = array("gif", "jpeg", "jpg", "png");			$temp = explode(".", $_FILES['file']["name"]);			$extension = end($temp);						if ($_FILES["file"]["error"] > 0){				echo "Return Code: " . $_FILES["file"]["error"] . "<br>";			}			else{				echo "Upload: " . $_FILES["file"]["name"] . "<br>";				echo "Type: " . $_FILES["file"]["type"] . "<br>";				echo "Size: " . ($_FILES["file"]["size"] / 1024) . " kB<br>";				echo "Temp file: " . $_FILES["file"]["tmp_name"] . "<br>";				if (file_exists("../images/home/" . $_FILES["file"]["name"])){					echo $_FILES["file"]["name"] . " already exists. ";				}				else{				move_uploaded_file($_FILES["file"]["tmp_name"],"../images/home/" . $_FILES["file"]["name"]);					echo "Stored in: " . "../images/home/" . $_FILES["file"]["name"];				}			}						$query = mysql_query("insert into foto (src,titolo) values ('images/home/".$_FILES["file"]["name"]."','$_POST[titolo]')");						if(!$query){				echo"<div class=\"alert alert-error\">Errore inserimento foto home!</div>";			}else{				echo"<div class=\"alert alert-success\">Inserimento foto home effettuato con successo</div>";			}			break;				
-		
+		break;		
 	}
 	$dest = '';
 	switch ($_POST['tipo']) {
@@ -106,8 +73,7 @@ $err['count'] = 0;
 		case 'admin':
 			$dest='admin.php';
 			break;
-        case 'fhome':			$dest='gfhome.php';			break;
-		case 'contatto':
+       	case 'contatto':
 			$dest='contatto.php';
 			break;
 		default:
@@ -117,5 +83,5 @@ $err['count'] = 0;
 	echo "<META HTTP-EQUIV=\"Refresh\" CONTENT=\"1;URL=".$dest."\">";
 ?>
 	</div>
-</div>
+</div><?phpinclude("sotto.php");?>
 

@@ -1,7 +1,5 @@
       </div>
-      <hr>
       <footer>
-        <h5>&copy; Federscout 2013</h5>
       </footer>
     </div>
     <?php if($arrStr[0]!="finder.php"){echo'<script src="js/jquery.js"></script>';}?>

@@ -135,37 +135,7 @@ $err['count'] = 0;
 		break;
 		
 		
-		case 'fhome':
-			if(isset($_POST['titolo'])){
-				$contenuto = $_POST['titolo'];
-			} else{
-				$err['count']++;
-				$err['titolo'] = array('errore' => 'Titolo vuoto o troppo lungo');
-			}
-			if(isset($_POST['src'])){
-				$link = $_POST['src'];
-			} else {
-				$err['count']++;
-				$err['src'] = array('errore' => 'Link vuoto o troppo lungo');
-			}
-			if ($err['count'] === 0) {
-				mysql_query("UPDATE foto SET src = '".$link."',titolo = '".$contenuto."'  WHERE id = $_POST[id] ") or die(mysql_error());
-				if(mysql_affected_rows()){
-					echo"<div class=\"alert alert-success\">Modifica foto effettuata con successo</div>";
-				}
-				else{
-					echo"<div class=\"alert alert-error\">Errore modifica Foto!</div>";
-				}
-			}
-			else {
-				foreach ($err as $key => $value) {
-					if (is_array($value)) {
-						echo '<div class="alert alert-error">'.$value['errore'].'</div>';
-					}
-				}
-			}
-			break;
-
+		
 		
 		default:
 			return false;
@@ -202,4 +172,6 @@ $err['count'] = 0;
 ?>
 	</div>
 </div>
-
+<?php
+include("sotto.php");
+?>

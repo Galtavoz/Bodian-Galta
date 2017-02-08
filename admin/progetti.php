@@ -46,3 +46,6 @@ include("sopra.php");
 					</table>
 				</div>
 			</div>
+<?php
+include("sotto.php");
+?>

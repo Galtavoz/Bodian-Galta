@@ -27,3 +27,7 @@ include("sopra.php")
               <p><a href="finder.php" class="btn">File »</a></p>
             </div>
           </div>
+		</div>
+<?php
+include("sotto.php");
+?>

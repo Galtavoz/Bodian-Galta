@@ -36,15 +36,7 @@ include("sopra.php");
 			}
 		break;
 		
-		case 'fhome':
-			$ris=mysql_query("DELETE FROM foto WHERE id='$_GET[id]'");
-			if(mysql_affected_rows()){
-				echo"<div class=\"alert alert-success\">Cancellazione foto dalla home effettuata con successo</div>";
-			}
-			else{
-				echo"<div class=\"alert alert-error\">Errore cancellazione foto dalla home!</div>";
-			}
-		break;
+		
 	}
 	$dest = '';
 	switch ($_GET['tipo']) {
@@ -58,11 +50,7 @@ include("sopra.php");
 
 		case 'progetto':
 			$dest='progetti.php';
-			break;
-		case 'fhome':
-			$dest='gfhome.php';
-			break;
-			
+		break;
 		default:
 			$dest='home.php';
 		break;
@@ -71,3 +59,6 @@ include("sopra.php");
 ?>
 	</div>
 </div>
+<?php
+include("sotto.php");
+?>

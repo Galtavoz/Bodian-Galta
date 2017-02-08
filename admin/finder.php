@@ -21,3 +21,6 @@ include("sopra.php");
 					<div id="elfinder"></div>
 				</div>
 			</div>
+<?php
+include("sotto.php");
+?>

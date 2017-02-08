@@ -29,3 +29,6 @@ include("csrf.php");
 					</form>
 				</div>
 			</div>
+<?php
+include("sotto.php");
+?>
